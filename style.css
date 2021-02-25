@@ -91,3 +91,56 @@ table tr td:last-child {
 .d-none {
     display: none;
 }
+
+.horizontal-line {
+    height:  10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 380px;
+    position: absolute; 
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    position: absolute;
+    bottom: 159px;
+    background-color: #1c0b7f;
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    border-radius: 3px;
+    border-color: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: #3c29a5;
+}
+
+

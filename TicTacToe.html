@@ -11,30 +11,44 @@
 </head>
 
 <body>
-    <div class="player-panel" id="player-1">
+    <img class="game-over d-none" id="game-over" src="image/game-5465779_1280.png">
+    <button id="restart-btn" class="restart-btn d-none" onclick="restart()">Restart</button>
+    <div class="player-panel">
         <div id="player-1">
             <img width="133px" src="image/kreis.png">Player 1
         </div>
-        <div id="player-2">
+        <div id="player-2" class="player-inactive">
             <img width="80px" height="80px" src="image/kreuz.png">Player 2
         </div>
     </div>
+    <div id="line-1" class="horizontal-line" style="top: 235px"></div>
+    <div id="line-2" class="horizontal-line" style="top: 374px"></div>
+    <div id="line-3" class="horizontal-line" style="top: 515px"></div>
+    <div id="line-4" class="horizontal-line make-vertical" style="top: 377px; left: 33px;"></div>
+    <div id="line-5" class="horizontal-line make-vertical" style="top: 377px"></div>
+    <div id="line-6" class="horizontal-line make-vertical" style="top: 377px; right: 33px;"></div>
+    <div id="line-7" class="horizontal-line" style="top: 377px; transform: rotate(45deg) scaleX(0.0);"></div>
+    <div id="line-8" class="horizontal-line" style="top: 377px; transform: rotate(-45deg) scaleX(0.0);"></div>
     <table>
         <tr>
+            <td onclick="fillShape(0)">
+                <img id="circle-0" class="shape d-none" src="image/kreis.png">
+                <img id="cross-0" class="shape-2 d-none" src="image/kreuz.png">
+            </td>
             <td onclick="fillShape(1)">
                 <img id="circle-1" class="shape d-none" src="image/kreis.png">
-                <img id="circle-1" class="shape d-none" src="image/kreuz.png">
+                <img id="cross-1" class="shape-2 d-none" src="image/kreuz.png">
             </td>
             <td onclick="fillShape(2)">
                 <img id="circle-2" class="shape d-none" src="image/kreis.png">
                 <img id="cross-2" class="shape-2 d-none" src="image/kreuz.png">
             </td>
+        </tr>
+        <tr>
             <td onclick="fillShape(3)">
                 <img id="circle-3" class="shape d-none" src="image/kreis.png">
                 <img id="cross-3" class="shape-2 d-none" src="image/kreuz.png">
             </td>
-        </tr>
-        <tr>
             <td onclick="fillShape(4)">
                 <img id="circle-4" class="shape d-none" src="image/kreis.png">
                 <img id="cross-4" class="shape-2 d-none" src="image/kreuz.png">
@@ -43,12 +57,12 @@
                 <img id="circle-5" class="shape d-none" src="image/kreis.png">
                 <img id="cross-5" class="shape-2 d-none" src="image/kreuz.png">
             </td>
+        </tr>
+        <tr>
             <td onclick="fillShape(6)">
                 <img id="circle-6" class="shape d-none" src="image/kreis.png">
                 <img id="cross-6" class="shape-2 d-none" src="image/kreuz.png">
             </td>
-        </tr>
-        <tr>
             <td onclick="fillShape(7)">
                 <img id="circle-7" class="shape d-none" src="image/kreis.png">
                 <img id="cross-7" class="shape-2 d-none" src="image/kreuz.png">
@@ -56,10 +70,6 @@
             <td onclick="fillShape(8)">
                 <img id="circle-8" class="shape d-none" src="image/kreis.png">
                 <img id="cross-8" class="shape-2 d-none" src="image/kreuz.png">
-            </td>
-            <td onclick="fillShape(9)">
-                <img id="circle-9" class="shape d-none" src="image/kreis.png">
-                <img id="cross-9" class="shape-2 d-none" src="image/kreuz.png">
             </td>
         </tr>
     </table>
